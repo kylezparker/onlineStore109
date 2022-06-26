@@ -4,3 +4,21 @@
 .catalog h3{
     color:blueviolet;
 }
+@media(max-width:768px){
+    .products-container{
+        /* display:grid; */
+        grid-template-columns:repeat(1,1fr);
+        /* display:flex;
+        justify-content:center;
+        flex-direction:column; */
+}
+}
+.products-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    /* display:flex;
+    justify-content:center;
+    flex-direction:column; */
+}
+
+
