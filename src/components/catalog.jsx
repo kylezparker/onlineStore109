@@ -5,9 +5,12 @@ import Product from "./product";
 import DataService from "../services/dataService"
 
 const Catalog = () =>{
+    //state variable, when variable changes, screen updates
+    //products is an immutable 
     let [products,setProducts]=useState([]);
 
     const loadCatalog = () =>{
+        //get products
         let service= new DataService();
         let data=service.getCatalog();
        setProducts(data); 
@@ -25,6 +28,7 @@ const Catalog = () =>{
             <h3>we have {products.length} products</h3>
             <div className="products-container">
             {
+                //map function transforms things. prod into product tags
                 products.map((prod)=>
                     (<Product key={prod.id} data={prod}></Product>))
             }
@@ -43,3 +47,10 @@ const Catalog = () =>{
 }
 
 export default Catalog;
+
+//useEffect, useState,
+//map function, key word, data word line 33
+//parent child components
+//object fit css for images 
+//js truthy values
+//meaning of this 

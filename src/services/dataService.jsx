@@ -19,7 +19,7 @@ let catalog=[
     },
     {
         id:3,
-        price:30,
+        price:30.65,
         stock:2,
         title:"Madame Bovary",
         image:"madame.jpg",
@@ -93,6 +93,7 @@ let catalog=[
 ]
 class DataService{
     getCatalog(){
+        //call the server and get the data
         return catalog;
     }
 }

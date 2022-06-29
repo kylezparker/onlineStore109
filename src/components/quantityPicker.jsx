@@ -2,16 +2,20 @@ import {useState} from 'react';
 import "./quantityPicker.css";
 // import Product from "./product";
 
-const QuantityPicker = () =>{
+const QuantityPicker = (props) =>{
     let [quantity,setQuantity]=useState(0);
     
     const handleIncrease=()=>{
-        setQuantity(quantity+1);
+        let newVal=quantity+1;
+        setQuantity(newVal);
+        props.onChange(newVal);  //call the function on the parent
     }
 
     const handleDecrease=()=>{
         if(quantity>1){
-        setQuantity(quantity-1);
+            let val=quantity-1;
+        setQuantity(val);
+        props.onChange(val);  //call the function on the parent
         }
     }
 

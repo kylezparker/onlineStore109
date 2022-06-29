@@ -1,3 +1,6 @@
 .navbar h1{
     color:darkorchid;
 }
+.navbar{
+  width:100%;
+}
