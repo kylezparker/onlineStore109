@@ -24,8 +24,10 @@ const Catalog = () =>{
     return(
         <div className="catalog container">
         <div className="catalog">
-            <h2>This is our Amazing Catalog!!</h2>
-            <h3>we have {products.length} products</h3>
+            {/* <h2>This is our Amazing Catalog!!</h2> */}
+            <br></br>
+            <h3>current stock: {products.length} books</h3>
+            <br></br>
             <div className="products-container">
             {
                 //map function transforms things. prod into product tags

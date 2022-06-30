@@ -12,10 +12,11 @@ function App() {
     //can use <React.Fragment> or <> instead of parent div to use mult divs
     <div className="App">
       <Navbar></Navbar>
-      <About></About>
-      <h1 className="welcome"> welcome to online store</h1>
+      <br></br>
+      <br></br>
+      <h1 className="welcome"> Welcome to The Bookstore</h1>
       <Catalog></Catalog>
-
+      <About></About>
       <Footer></Footer>
     </div>
   );

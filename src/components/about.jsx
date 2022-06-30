@@ -1,6 +1,6 @@
 
 import {useState} from 'react';
-
+import "./about.css";
 
 
 const About = () =>{
@@ -17,9 +17,11 @@ const About = () =>{
     }
     return(
         <div>
-     <h1>My name is Kyle</h1>
-
-     { visible ? <h4>asdasdasdasd@gmail.com</h4> : "click on the button below"}
+    
+        <br></br>
+        <br></br>
+     { visible ? <h4>johnhohnson234@gmail.com</h4> : <h3>click on the button below</h3>}
+     <br></br>
      <button onClick={changeVisibility}>show info</button>
 
      <br />
