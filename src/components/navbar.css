@@ -2,6 +2,7 @@
     color:darkorchid;
 }
 .navbar{
+  background-color:darkorchid;
   width:100%;
 
 }
@@ -9,5 +10,7 @@
   font-size:25px;
 }
 .nav-link{
+  color:white;
   font-size:20px;
 }
+
