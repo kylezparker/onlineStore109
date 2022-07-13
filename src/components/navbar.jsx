@@ -24,7 +24,7 @@ function Navbar(){
 <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            Bookstore
+            📚Bookstore✏️📜
           </Link>
           <button
             className="navbar-toggler"
@@ -57,7 +57,7 @@ function Navbar(){
             <li className="nav-item">
               {/* <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
               <button className="btn btn-outline-success" type="submit"> */}
-              <Link className="nav-link" to="/cart">View Cart</Link>
+              <Link className="nav-link form-control me-2" to="/cart">View Cart</Link>
               {/* </button> */}
             </li>
           </div>

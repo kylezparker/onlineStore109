@@ -2,7 +2,7 @@
     color:teal;
 }
 .catalog h3{
-    color:blueviolet;
+    color:black;
 }
 @media(max-width:768px){
     .catalog container{
