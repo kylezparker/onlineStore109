@@ -5,7 +5,9 @@ import {useState} from 'react'
 
 const Admin = () =>{
     const [coupon, setCoupon] = useState({});
-    const [product, setProduct] =useState({});
+    const [product, setProduct] = useState({});
+    const [allCoupons, setAllCoupons] = useState([]);
+    const [allProducts, setAllProducts] = useState([]);
 
     const handleProductChange = (e) => {
         let name= e.target.name;
@@ -28,6 +30,14 @@ const Admin = () =>{
         console.log(copy)
         // console.log(product);
 
+        //todo:save prod on server
+        //save prod on state array
+//change name of copy
+        let copyAllProds= [...allProducts];
+        copyAllProds.push(copy);
+        setAllProducts(copyAllProds);
+
+
     };
     const handleCouponChange = (e) => {
         let name= e.target.name;
@@ -48,6 +58,14 @@ const Admin = () =>{
         // copy["price"]=parseFloat(copy["price"]);
         console.log(copy)
         // console.log(coupon);
+        //todo:send obj to server
+
+        //add it to the state array
+        let copyCoupons= [...allCoupons];
+        copyCoupons.push(copy);
+        setAllCoupons(copyCoupons)
+
+        // setCoupon(copy);
 
     };
 
@@ -73,6 +91,12 @@ return (
                 <div className="my-control">
                     <label>Category</label>
                     <input name="category" onChange={handleProductChange} type="text" />
+                </div>
+
+                <div className="products-list">
+                    <ul>
+                        {allProducts.map((prod, index) => <li key={index}>{prod.title} - ${prod.price}</li>)}
+                    </ul>
                 </div>
 
 
@@ -104,6 +128,14 @@ return (
                     <button onClick={saveCoupon} className="btn btn-primary"> Save </button>
                     </div>
                     </div>
+
+                    <div className="coupons-list">
+                        <ul>
+                        {allCoupons.map((coupon, index) => <li key={index}>{coupon.code} - {coupon.discount}% off</li>)}
+                        </ul>
+                        {/* display stored coupons */}
+                    </div>
+
                     </section>
                     </div>
                     </div>

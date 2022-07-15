@@ -1,6 +1,12 @@
 import {Link} from 'react-router-dom';
 import "./navbar.css";
+import {useContext} from 'react';
+import StoreContext from './../context/storeContext';
+
+
 function Navbar(){
+  let cart= useContext(StoreContext).cart;
+
     return (
 //     <div className="navbar">
         
@@ -52,12 +58,15 @@ function Navbar(){
               <li className="nav-item">
                 <Link className="nav-link" to="/about">About</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/admin">Admin</Link>
+              </li>
             </ul>
             {/* rework view cart  button */}
             <li className="nav-item">
               {/* <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
               <button className="btn btn-outline-success" type="submit"> */}
-              <Link className="nav-link form-control me-2" to="/cart">View Cart</Link>
+              <Link className="nav-link form-control me-2" to="/cart"><span className="badge bg-primary">{cart.length}</span>View Cart</Link>
               {/* </button> */}
             </li>
           </div>
