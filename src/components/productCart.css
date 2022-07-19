@@ -1,0 +1,29 @@
+.product-cart{
+    display:flex;
+    border: 1px solid #b8b8b8;
+    margin-bottom: 12px;
+    padding:0px 14px;
+    align-items:center;
+    justify-content:center;
+    border-radius:6px;
+    background-color:white;
+}
+.product-cart img{
+    height:140px;
+    flex:1;
+}
+.product-cart .info{
+    flex:6;
+}
+.product-cart .price,.product-cart .quantity,.product-cart .total{
+    flex:1;
+}
+.product-cart button{
+    flex:1;
+}
+.product-cart .col-head{
+    display:block;
+    color:#333;
+    font-weight:bold;
+    
+}

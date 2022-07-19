@@ -7,6 +7,15 @@ import StoreContext from './../context/storeContext';
 function Navbar(){
   let cart= useContext(StoreContext).cart;
 
+  const getCount = () => {
+    let count = 0;
+    for (let i = 0; i<cart.length;i++){
+      
+      count += cart[i].quantity;
+    }
+    return count;
+  }
+
     return (
 //     <div className="navbar">
         
@@ -66,7 +75,7 @@ function Navbar(){
             <li className="nav-item">
               {/* <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
               <button className="btn btn-outline-success" type="submit"> */}
-              <Link className="nav-link form-control me-2" to="/cart"><span className="badge bg-primary">{cart.length}</span>View Cart</Link>
+              <Link className="nav-link form-control me-2" to="/cart"><span className="badge bg-primary">{getCount()}</span>View Cart</Link>
               {/* </button> */}
             </li>
           </div>

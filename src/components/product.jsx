@@ -22,8 +22,14 @@ const Product = (props) =>{
     }
 
     const handleAdd = () => {
-        console.log("totalAdd");
-        globalAddProd(props.data);
+        //copy of props.data plus quantity
+        let prod4Cart= {...props.data};
+        prod4Cart.quantity= quantity;
+
+        // let prod4Cart= {...props.data, quantity: quantity};
+
+        // console.log("totalAdd");
+        globalAddProd(prod4Cart);
         }
 
 
