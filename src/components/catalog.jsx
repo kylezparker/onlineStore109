@@ -9,10 +9,10 @@ const Catalog = () =>{
     //products is an immutable 
     let [products,setProducts]=useState([]);
 
-    const loadCatalog = () =>{
+    const loadCatalog = async () =>{
         //get products
         let service= new DataService();
-        let data=service.getCatalog();
+        let data= await service.getCatalog();
        setProducts(data); 
     }
     // loadCatalog();

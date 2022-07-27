@@ -1,5 +1,6 @@
 import './admin.css'
 import {useState} from 'react'
+import DataService from '../services/dataService'
 
 
 
@@ -25,12 +26,15 @@ const Admin = () =>{
         // setCoupon(e.target.value);
     };
     const saveProduct = () => {
-        let copy={...coupon}; //create a cpoy
+        // {...coupon} to {...product}
+        let copy={...product}; //create a cpoy
         copy["price"]=parseFloat(copy["price"]);
         console.log(copy)
         // console.log(product);
 
-        //todo:save prod on server
+        //todo:save copy on server
+        let service = new DataService();
+        service.saveProduct(copy);
         //save prod on state array
 //change name of copy
         let copyAllProds= [...allProducts];
@@ -86,7 +90,7 @@ return (
                 </div>
                 <div className="my-control">
                     <label>Image</label>
-                    <input name="picture" placeholder="image name" onChange={handleProductChange} type="text" />
+                    <input name="image" placeholder="image name" onChange={handleProductChange} type="text" />
                 </div>
                 <div className="my-control">
                     <label>Category</label>
